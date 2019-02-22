@@ -2,15 +2,11 @@
 
 require_once('app/models/hotel.php');
 require_once('app/models/package.php');
-$detail = "Suspendisse potenti. In faucibus massa. Lorem ipsum
-dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.
-Lorem ipsum dolor sit amet.";
+require_once('app/controllers/hotel_controller.php');
 
-$hotels = array(
-	new Hotel("Hotel 1", 1000, $detail, "images/hotel_1.jpg"),
-	new Hotel("Hotel 2", 1200, $detail, "images/hotel_2.jpg"),
-	new Hotel("Hotel 3", 1300, $detail, "images/hotel_3.jpg"),
-);
+$hotel_ctrl = new HotelController();
+$hotels = $hotel_ctrl->get_all();
+
 
 $packages = array(
 	new Package("1 Day", 10002, 5, "images/Yala.jpg"),

@@ -1,39 +1,13 @@
 <?php
-
-class Package{
-
-	public $name;
-    public $price;
-	public $rating;
-	public $image;
-	
-	function __construct($name, $price, $rating, $image){
-		$this->name = $name;
-		$this->price = $price;
-		$this->rating = $rating;
-		$this->image = $image;
-	}
-}
-
-class Hotel
-{
-    public $name;
-    public $price;
-    public $details;
-	public $image;
-	
-	function __construct($name, $price, $details, $image) {
-		$this->name = $name;
-		$this->price = $price;
-		$this->details = $details;
-		$this->image = $image;
-	}
-}
-
+require_once('app/models/hotel.php');
+require_once('app/models/package.php');
+$detail = "Suspendisse potenti. In faucibus massa. Lorem ipsum
+dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.
+Lorem ipsum dolor sit amet.";
 $hotels = array(
-	new Hotel("Gayana", 1000, "gayana tangalla", "image"),
-	new Hotel("Gayana", 1000, "gayana tangalla", "image"),
-	new Hotel("Gayana", 1000, "gayana tangalla", "image"),
+	new Hotel("Hotel 1", 1000, $detail, "images/hotel_1.jpg"),
+	new Hotel("Hotel 2", 1200, $detail, "images/hotel_2.jpg"),
+	new Hotel("Hotel 3", 1300, $detail, "images/hotel_3.jpg"),
 );
 
 $packages = array(
@@ -507,13 +481,13 @@ $packages = array(
                                         <div class="offers_image_container">
                                             <!-- Image by https://unsplash.com/@kensuarez -->
                                             <div class="offers_image_background"
-                                                style="background-image:url(images/hotel_1.jpg)"></div>
-                                            <div class="offer_name"><a href="single_listing.html">Gayana Hotel</a></div>
+                                                style="background-image:url(<?php echo $hotel->image ?>)"></div>
+                                            <div class="offer_name"><a href="single_listing.html"><?php echo $hotel->name ?></a></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-8">
                                         <div class="offers_content">
-                                            <div class="offers_price">LKR12000.00<span>per night</span></div>
+                                            <div class="offers_price">LKR<?php echo $hotel->price ?><span>per night</span></div>
                                             <div class="rating_r rating_r_4 offers_rating" data-rating="4">
                                                 <i></i>
                                                 <i></i>
@@ -521,9 +495,7 @@ $packages = array(
                                                 <i></i>
                                                 <i></i>
                                             </div>
-                                            <p class="offers_text">Suspendisse potenti. In faucibus massa. Lorem ipsum
-                                                dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.
-                                                Lorem ipsum dolor sit amet.</p>
+                                            <p class="offers_text"><?php echo $hotel->details ?></p>
                                             <div class="offers_icons">
                                                 <ul class="offers_icons_list">
                                                     <li class="offers_icons_item"><img src="images/post.png" alt="">

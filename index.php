@@ -60,11 +60,10 @@
 						<div class="main_nav_container ml-auto">
 							<ul class="main_nav_list">
 								<li class="main_nav_item"><a href="#">Home</a></li>
-								<li class="main_nav_item"><a href="tour.html">Tour</a></li>
-								<li class="main_nav_item"><a href="booking.html">Booking</a></li>
-								<li class="main_nav_item"><a href="hotel.html">Hotel</a></li>
+								<li class="main_nav_item"><a href="tour.php">Tour</a></li>
+								<li class="main_nav_item"><a href="packages.php">Packages</a></li>
 								<li class="main_nav_item"><a href="#">About us</a></li>
-								<li class="main_nav_item"><a href="contact.html">contact</a></li>
+								<li class="main_nav_item"><a href="contact.php">contact</a></li>
 							</ul>
 						</div>
 						
@@ -88,10 +87,10 @@
 			<div class="logo menu_logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
 			<ul>
 				<li class="menu_item"><a href="#">Home</a></li>
-				<li class="menu_item"><a href="tour.html">Tour</a></li>
-				<li class="menu_item"><a href="offers.html">Booking</a></li>
-				<li class="menu_item"><a href="blog.html">About us</a></li>
-				<li class="menu_item"><a href="contact.html">Contact</a></li>
+				<li class="menu_item"><a href="tour.php">Tour</a></li>
+				<li class="menu_item"><a href="packages.html">Packages</a></li>
+				<li class="menu_item"><a href="blog.php">About us</a></li>
+				<li class="menu_item"><a href="contact.php">Contact</a></li>
 			</ul>
 		</div>
 	</div>

@@ -102,7 +102,7 @@ $(document).ready(function()
 			{
 				items:1,
 				loop:true,
-				autoplay:false,
+				autoplay:true,
 				smartSpeed:1200,
 				dotsContainer:'main_slider_custom_dots'
 			});

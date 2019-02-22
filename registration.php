@@ -1,6 +1,4 @@
-<link href="styles/bootstrap/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="styles/bootstrap/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <!------ Include the above in your HEAD tag ---------->
 
 <!doctype html>
@@ -20,6 +18,9 @@
 
     <!-- Bootstrap CSS -->
     <link href="styles/bootstrap/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="styles/bootstrap/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="styles/bootstrap/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
     <title> Register </title>

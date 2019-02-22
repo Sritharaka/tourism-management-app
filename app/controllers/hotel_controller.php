@@ -36,5 +36,14 @@
 
             return $hotels;
         }
+
+        public function add_hotel($name, $price, $image, $detials, $email){
+            $connection = mysqli_connect("127.0.0.1","root","","gayana_db");
+
+            $sql = "INSERT INTO `hotel`(`name`, `location`, `email`, `telephone_hotline`, `address`, `price`, `image_path`, `details`) VALUES ('$name','location','$email','0123456789','address','$price','$image','$detials')";
+            $result = mysqli_query($connection, $sql);
+
+            return $sql;
+        }
     }
 ?>

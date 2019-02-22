@@ -56,12 +56,11 @@
 						</div>
 						<div class="main_nav_container ml-auto">
 							<ul class="main_nav_list">
-								<li class="main_nav_item"><a href="#">Home</a></li>
-								<li class="main_nav_item"><a href="tours.html">Tour</a></li>
-								<li class="main_nav_item"><a href="offers.html">Booking</a></li>
-								<li class="main_nav_item"><a href="hotel.html">Hotel</a></li>
-								<li class="main_nav_item"><a href="#">About us</a></li>
-								<li class="main_nav_item"><a href="contact.html">contact</a></li>
+								<li class="main_nav_item"><a href="/">Home</a></li>
+								<li class="main_nav_item"><a href="tours.php">Tour</a></li>
+								<li class="main_nav_item"><a href="packages.php">Packages</a></li>
+								<li class="main_nav_item"><a href="about.php">About us</a></li>
+								<li class="main_nav_item"><a href="contact.php">contact</a></li>
 							</ul>
 						</div>
 						

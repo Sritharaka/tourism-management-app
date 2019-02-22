@@ -64,6 +64,7 @@
 								<li class="main_nav_item"><a href="packages.php">Packages</a></li>
 								<li class="main_nav_item"><a href="#">About us</a></li>
 								<li class="main_nav_item"><a href="contact.php">contact</a></li>
+								<li class="main_nav_item"><a href="/admin">Admin Panel</a></li>
 							</ul>
 						</div>
 						

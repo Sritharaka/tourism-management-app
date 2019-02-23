@@ -7,7 +7,7 @@ function addHotel($event){
 
     $.ajax({
         method:'POST',
-        url: '/api/hotel.php',
+        url: '/api/hotel/create.php',
         data: JSON.stringify({
             "name": name,
             "price": price,

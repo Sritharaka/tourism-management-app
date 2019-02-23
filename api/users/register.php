@@ -1,9 +1,5 @@
-<html>
-<head></head>
-<title>registrer function</title>
 <?php
-
-     
+    
      include("db_connection.php");
      
      $firstname = $_POST['name'];
@@ -45,4 +41,3 @@
 
     
 ?>
-</html>

@@ -1,11 +1,25 @@
 <?php
-     
-    require_once($_SERVER['DOCUMENT_ROOT'].'/app/models/hotel.php');
 
-    class HotelController {
+    require_once($_SERVER['DOCUMENT_ROOT'].'/app/models/hotel.php');
+    require_once($_SERVER['DOCUMENT_ROOT'].'/app/config.php');
+
+    class HotelRepository {
+        private $config;
+
+        public function __construct()
+        {
+            $configuration = new Config();
+            $this->config = $configuration->get_db_info(true);
+        }
+
+        private function get_conn()
+        {
+            return mysqli_connect($this->config->host,$this->config->user,$this->config->password,$this->config->db);
+        }
+
         public function get_all()
         {
-            $connection = mysqli_connect("127.0.0.1","root","","gayana_db");
+            $connection = $this->get_conn();
             $hotels = array();
 
             if(mysqli_connect_errno()){
@@ -38,10 +52,13 @@
         }
 
         public function add_hotel($name, $price, $image, $detials, $email){
-            $connection = mysqli_connect("127.0.0.1","root","","gayana_db");
+            $connection = $this->get_conn();
 
             $sql = "INSERT INTO `hotel`(`name`, `location`, `email`, `telephone_hotline`, `address`, `price`, `image_path`, `details`) VALUES ('$name','location','$email','0123456789','address','$price','$image','$detials')";
+            
             $result = mysqli_query($connection, $sql);
+
+            $connection->close();
 
             return $sql;
         }

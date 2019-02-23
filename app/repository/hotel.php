@@ -28,9 +28,10 @@
                 Lorem ipsum dolor sit amet.";
 
                 $hotels = array(
-                	new Hotel("Hotel 1", 1000, $detail, "images/hotel_1.jpg"),
-                	new Hotel("Hotel 2", 1200, $detail, "images/hotel_2.jpg"),
-                	new Hotel("Hotel 3", 1300, $detail, "images/hotel_3.jpg"),
+                	new Hotel(1, "Hotel 1", 1000, $detail, "images/hotel_1.jpg", 'keminda4lk@gamil.com'),
+                	new Hotel(2, "Hotel 2", 1200, $detail, "images/hotel_2.jpg", 'keminda4lk@gamil.com'),
+                    new Hotel(3, "Hotel 3", 1300, $detail, "images/hotel_3.jpg", 'keminda4lk@gamil.com'),
+                    
                 );
             }else{
                     
@@ -40,7 +41,7 @@
                 if ($result->num_rows > 0) {
                     // output data of each row
                     while($row = $result->fetch_assoc()) {              
-                        $hotel = new Hotel($row["name"], $row["price"], $row["details"], $row["image_path"]);
+                        $hotel = new Hotel($row["id"], $row["name"], $row["price"], $row["details"], $row["image_path"], $row["email"]);
                         array_push($hotels, $hotel);
                     }
                 }
@@ -50,6 +51,21 @@
 
             return $hotels;
         }
+
+       public function delete_hotel($id){
+
+        $connection = $this->get_conn();
+       
+         $sql = "DELETE FROM `hotel` WHERE id=$id";
+         
+         $result = mysqli_query($connection, $sql);
+
+         $connection->close();
+
+         return $sql;
+
+       }
+
 
         public function add_hotel($name, $price, $image, $detials, $email){
             $connection = $this->get_conn();

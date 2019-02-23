@@ -217,7 +217,13 @@
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a class="nav-link" href="/admin/pages/add-hotel.html">Add Hotel</a>
-                                        </li>                                       
+                                        </li> 
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="/admin/pages/delete-hotel.html">Delete Hotel</a>
+                                            </li>   
+                                            <li class="nav-item">
+                                                    <a class="nav-link" href="/admin/pages/update-hotel.html">Update Hotel</a>
+                                                </li>                                    
                                     </ul>
                                 </div>
                             </li>                            
@@ -288,41 +294,40 @@
                                         multiple sizes, states, and more.</p>
                                 </div>
                                 <div class="card">
-                                    <h5 class="card-header">Delete Hotel </h5>
+                                    <h5 class="card-header">Add Hotel {{display}}</h5>
                                         <div class="card-body">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                                        <div class="card">
-                                                            <h5 class="card-header">Striped Table</h5>
-                                                            <div class="card-body">
-                                                                <table class="table table-striped">
-                                                                    <thead>
-                                                                        <tr>
-                                                                            <th scope="col">#</th>
-                                                                            <th scope="col">Name</th>
-                                                                            <th scope="col">Email address</th>
-                                                                            <th scope="col">Price</th>
-                                                                            <th scope="col">image</th>
-                                                                            <th scope="col">Detailes</th>
-                                                                            <th scope="col">Action</th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <tr v-for="(hotel,index) of hotels">
-                                                                            <th scope="row">{{hotel.id}}</th>
-                                                                            <td>{{hotel.name}}</td>
-                                                                            <td>{{hotel.email}}</td>
-                                                                            <td>{{hotel.price}}</td>
-                                                                            <td>{{hotel.image}}</td>
-                                                                            <td>{{hotel.details}}</td>
-                                                                            <td><button id="Delete" @click="deleteHotel(hotel)" class="btn btn-danger">Delete</button></td>
-                                                                            <td><button id="update" @click="updateHotel(hotel)" class="btn btn-primary">update</button></td>
-                                                                        </tr>
-                                                                      
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="name" class="col-form-label">Name</label>
+                                                    <input id="name" v-model="name" type="text" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email">Email address</label>
+                                                    <input id="email" v-model="email" type="email" placeholder="name@example.com"
+                                                        class="form-control">
+                                                    <p>We'll never share your email with anyone else.</p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="price" class="col-form-label">Price</label>
+                                                    <input id="price" v-model="price" type="number" class="form-control"
+                                                        placeholder="Price">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="image">image</label>
+                                                    <input id="image" v-model="image" type="text" placeholder="images/hotel_1.jpg"
+                                                        class="form-control">
+                                                </div>
+                                                <!-- <div class="custom-file mb-3">
+                                                <input type="file" class="custom-file-input" id="customFile">
+                                                <label class="custom-file-label" for="customFile">File Input</label>
+                                            </div> -->
+                                                <div class="form-group">
+                                                    <label for="details">Details</label>
+                                                    <textarea class="form-control" v-model="details" id="details" rows="3"></textarea>
+                                                </div>
+                                                <button @click="updateHotel" type="button"
+                                                    class="btn btn-primary">Update!</button>
+                                            </form>
                                         </div>
                                 </div>
                             </div>
@@ -426,7 +431,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vuex"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
-    <script src="../scripts/delete-hotel.js"></script>
+    <script src="../scripts/update-hotel.js"></script>
 </body>
 
 </html>

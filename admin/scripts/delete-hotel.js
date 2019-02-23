@@ -5,8 +5,6 @@ const vueApp = new Vue({
     },
     methods: {
         deleteHotel(hotel) {
-            
-
             Vue.http.delete('/api/hotel/delete.php',{body:{id:hotel.id}})
                 .then(response => {
                   
@@ -15,11 +13,10 @@ const vueApp = new Vue({
                 .catch(err => {
                     toastr.error(JSON.stringify(err));
                 })
-
+        },
+        updateHotel(hotel){
+            window.location.href = '/admin/pages/update-hotel.html?id='+hotel.id;
         }
-
-
-
     },
     mounted: function () {
 
@@ -30,6 +27,6 @@ const vueApp = new Vue({
             })
             .catch(err => {
                 toastr.error(JSON.stringify(err));
-            })
+            });
     }
 });

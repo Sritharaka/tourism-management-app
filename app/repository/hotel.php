@@ -66,6 +66,19 @@
 
        }
 
+         public function update_hotel($id, $name, $price, $image, $details, $email){
+           
+            $connection = $this->get_conn();
+
+            $sql = "UPDATE `hotel` SET `name`='$name',`email`='$email',`price`='$price',`image_path`='$image',`details`='$details' WHERE id=$id";
+            
+            $result = mysqli_query($connection, $sql);
+
+            $connection->close();
+
+            return $result;
+
+         }
 
         public function add_hotel($name, $price, $image, $detials, $email){
             $connection = $this->get_conn();

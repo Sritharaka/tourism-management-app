@@ -2,7 +2,7 @@
     class Config {
         public function get_db_info($isLocal = false)
         {
-            if($isLocal){
+            if($_SERVER['SERVER_NAME'] == 'localhost'){
                 $config = (object) array(
                     "host" => "localhost",
                     "user" => "root",

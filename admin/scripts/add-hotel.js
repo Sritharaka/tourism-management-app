@@ -1,25 +1,34 @@
-function addHotel($event){
-    var name = document.getElementById('name').value;
-    var price = document.getElementById('price').value;
-    var details = document.getElementById('details').value;
-    var image = document.getElementById('image').value;
-    var email = document.getElementById('email').value;
-
-    $.ajax({
-        method:'POST',
-        url: '/api/hotel/create.php',
-        data: JSON.stringify({
-            "name": name,
-            "price": price,
-            "image": image,
-            "details": details,
-            "email":email
-        })
-    }).done(function (resp) {
-        document.getElementById('name').value = '';
-        document.getElementById('price').value = '';
-        document.getElementById('details').value = '';
-        document.getElementById('image').value = '';
-        document.getElementById('email').value = '';
-    });
-}
+const vueApp = new Vue({
+    el: '#vapp',
+    data: {
+        display: 'redbox',
+        name: '',
+        price: 0,
+        image: 'images/hotel_1.jpg',
+        details: '',
+        email: ''
+    },
+    methods: {
+        addHotel(){
+            const data = {
+                "name": this.name,
+                "price": this.price,
+                "image": this.image,
+                "details": this.details,
+                "email":this.email
+            };
+            
+            Vue.http.post('/api/hotel/create.php',data)
+                .then(response => {
+                    this.name = '';
+                    this.price = 0;
+                    this.image = '';
+                    this.details = '';
+                    this.email = '';
+                    toastr.success('Hotel added');
+                }).catch((err) => {
+                    toastr.error(JSON.stringify(err));
+                })
+        }
+    }
+});

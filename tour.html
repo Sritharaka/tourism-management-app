@@ -10,6 +10,9 @@
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="styles/contact_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
+<link rel="stylesheet" type="text/css" href="styles/hotel_styles.css">
+
+
 </head>
 
 <body>
@@ -47,6 +50,9 @@
 
 		<!-- Main Navigation -->
 
+
+			
+
 		<nav class="main_nav">
 			<div class="container">
 				<div class="row">
@@ -56,10 +62,9 @@
 						</div>
 						<div class="main_nav_container ml-auto">
 							<ul class="main_nav_list">
-								<li class="main_nav_item"><a href="#">Home</a></li>
+								<li class="main_nav_item"><a href="index.html">Home</a></li>
 								<li class="main_nav_item"><a href="tour.html">Tour</a></li>
-								<li class="main_nav_item"><a href="offers.html">Booking</a></li>
-								<li class="main_nav_item"><a href="hotel.html">Hotel</a></li>
+								<li class="main_nav_item"><a href="packages.html">Package</a></li>
 								<li class="main_nav_item"><a href="#">About us</a></li>
 								<li class="main_nav_item"><a href="contact.html">contact</a></li>
 							</ul>
@@ -84,9 +89,9 @@
 			<div class="menu_close_container"><div class="menu_close"></div></div>
 			<div class="logo menu_logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
 			<ul>
-				<li class="menu_item"><a href="#">Home</a></li>
-				<li class="menu_item"><a href="about.html">Tour</a></li>
-				<li class="menu_item"><a href="offers.html">Booking</a></li>
+				<li class="menu_item"><a href="index.html">Home</a></li>
+				<li class="menu_item"><a href="tour.html">Tour</a></li>
+				<li class="menu_item"><a href="packages.html">Package</a></li>
 				<li class="menu_item"><a href="blog.html">About us</a></li>
 				<li class="menu_item"><a href="contact.html">Contact</a></li>
 			</ul>
@@ -96,280 +101,175 @@
               <div class="home">
 		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/contact_background.jpg"></div>
 		<div class="home_content">
-			<div class="home_title">contact</div>
+			<div class="home_title">Tour</div>
 		</div>
 	</div>
 	<!-- Home -->
   
-
-
-	<div class="search">
-		
-
-		<!-- Search Contents -->
-		
-		<div class="container fill_height">
-			<div class="row fill_height">
-				<div class="col fill_height">
-
-					<!-- Search Tabs -->
-
-					<div class="search_tabs_container">
-						<div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-							<div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/suitcase.png" alt=""><span>hotels</span></div>
-							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/island.png" alt="">trips</div>
-							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><img src="images/diving.png" alt="">activities</div>
-						</div>		
-					</div>
-
-					<!-- Search Panel -->
-
-					<div class="search_panel active">
-						<form action="#" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-							<div class="search_item">
-								<div>destination</div>
-								<input type="text" class="destination search_input" required="required">
-							</div>
-							<div class="search_item">
-								<div>check in</div>
-								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>check out</div>
-								<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>adults</div>
-								<select name="adults" id="adults_1" class="dropdown_item_select search_input">
-									<option>01</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<div class="search_item">
-								<div>children</div>
-								<select name="children" id="children_1" class="dropdown_item_select search_input">
-									<option>0</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
-						</form>
-					</div>
-
-					<!-- Search Panel -->
-
-					<div class="search_panel">
-						<form action="#" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-							<div class="search_item">
-								<div>destination</div>
-								<input type="text" class="destination search_input" required="required">
-							</div>
-							<div class="search_item">
-								<div>check in</div>
-								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>check out</div>
-								<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>adults</div>
-								<select name="adults" id="adults_2" class="dropdown_item_select search_input">
-									<option>01</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<div class="search_item">
-								<div>children</div>
-								<select name="children" id="children_2" class="dropdown_item_select search_input">
-									<option>0</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
-						</form>
-					</div>
-
-					<!-- Search Panel -->
-
-					<div class="search_panel">
-						<form action="#" id="search_form_3" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-							<div class="search_item">
-								<div>destination</div>
-								<input type="text" class="destination search_input" required="required">
-							</div>
-							<div class="search_item">
-								<div>check in</div>
-								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>check out</div>
-								<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>adults</div>
-								<select name="adults" id="adults_3" class="dropdown_item_select search_input">
-									<option>01</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<div class="search_item">
-								<div>children</div>
-								<select name="children" id="children_3" class="dropdown_item_select search_input">
-									<option>0</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
-						</form>
-					</div>
-
-					<!-- Search Panel -->
-
-					<div class="search_panel">
-						<form action="#" id="search_form_4" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-							<div class="search_item">
-								<div>destination</div>
-								<input type="text" class="destination search_input" required="required">
-							</div>
-							<div class="search_item">
-								<div>check in</div>
-								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>check out</div>
-								<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>adults</div>
-								<select name="adults" id="adults_4" class="dropdown_item_select search_input">
-									<option>01</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<div class="search_item">
-								<div>children</div>
-								<select name="children" id="children_4" class="dropdown_item_select search_input">
-									<option>0</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
-						</form>
-					</div>
-
-					<!-- Search Panel -->
-
-					<div class="search_panel">
-						<form action="#" id="search_form_5" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-							<div class="search_item">
-								<div>destination</div>
-								<input type="text" class="destination search_input" required="required">
-							</div>
-							<div class="search_item">
-								<div>check in</div>
-								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>check out</div>
-								<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>adults</div>
-								<select name="adults" id="adults_5" class="dropdown_item_select search_input">
-									<option>01</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<div class="search_item">
-								<div>children</div>
-								<select name="children" id="children_5" class="dropdown_item_select search_input">
-									<option>0</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
-						</form>
-					</div>
-
-					<!-- Search Panel -->
-
-					<div class="search_panel">
-						<form action="#" id="search_form_6" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-							<div class="search_item">
-								<div>destination</div>
-								<input type="text" class="destination search_input" required="required">
-							</div>
-							<div class="search_item">
-								<div>check in</div>
-								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>check out</div>
-								<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>adults</div>
-								<select name="adults" id="adults_6" class="dropdown_item_select search_input">
-									<option>01</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<div class="search_item">
-								<div>children</div>
-								<select name="children" id="children_6" class="dropdown_item_select search_input">
-									<option>0</option>
-									<option>02</option>
-									<option>03</option>
-								</select>
-							</div>
-							<button class="button search_button">search<span></span><span></span><span></span></button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>		
-	</div>
-
-
-
-			</div>
-
-		</div>
-	<footer>
-
-	<!-- Copyright -->
-
-	<div class="copyright">
-		<div class="container">
+	
+	<div class="offers_item rating_4" v-for="hotel in hotels">
 			<div class="row">
-				<div class="col-lg-3 order-lg-2 col-offset-3 order-2">
-					<div class="copyright_content d-flex flex-row align-items-center">
-						<div>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+				<div class="col-md-1 temp_col"></div>
+				<div class="col-md-2 col-1680-3">
+					<div class="offers_image_container">
+						<!-- Image by https://unsplash.com/@kensuarez -->
+						<div class="offers_image_background"
+						:style="'background-image:url(' + hotel.image +')'"></div>
+						<div class="offer_name"><a href="single_listing.html">{{hotel.name}}</a></div>
 					</div>
 				</div>
-				<div class="col-lg-9 order-lg-2 order-1">
-					<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
-						
+				<div class="col-md-2">
+					<div class="offers_content">
+						<div class="offers_price">LKR{{hotel.price}}<span>per night</span></div>
+						<div class="rating_r rating_r_4 offers_rating" data-rating="4">
+							<i></i>
+							<i></i>
+							<i></i>
+							<i></i>
+							<i></i>
+						</div>
+						<p class="offers_text">{{hotel.details}}</p>
+						<div class="offers_icons">
+							<ul class="offers_icons_list">
+								<li class="offers_icons_item"><img src="images/post.png" alt="">
+								</li>
+								<li class="offers_icons_item"><img src="images/compass.png" alt="">
+								</li>
+								<li class="offers_icons_item"><img src="images/bicycle.png" alt="">
+								</li>
+								<li class="offers_icons_item"><img src="images/sailboat.png" alt="">
+								</li>
+							</ul>
+						</div>
+						<div class="button book_button"><a
+								href="#">book<span></span><span></span><span></span></a></div>
+
+					</div>
+				</div>
+
+				<div class="col-md-1 temp_col"></div>
+				<div class="col-md-2 col-1680-3">
+					<div class="offers_image_container">
+						<!-- Image by https://unsplash.com/@kensuarez -->
+						<div class="offers_image_background"
+						:style="'background-image:url(' + hotel.image +')'"></div>
+						<div class="offer_name"><a href="single_listing.html">{{hotel.name}}</a></div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="offers_content">
+						<div class="offers_price">LKR{{hotel.price}}<span>per night</span></div>
+						<div class="rating_r rating_r_4 offers_rating" data-rating="4">
+							<i></i>
+							<i></i>
+							<i></i>
+							<i></i>
+							<i></i>
+						</div>
+						<p class="offers_text">{{hotel.details}}</p>
+						<div class="offers_icons">
+							<ul class="offers_icons_list">
+								<li class="offers_icons_item"><img src="images/post.png" alt="">
+								</li>
+								<li class="offers_icons_item"><img src="images/compass.png" alt="">
+								</li>
+								<li class="offers_icons_item"><img src="images/bicycle.png" alt="">
+								</li>
+								<li class="offers_icons_item"><img src="images/sailboat.png" alt="">
+								</li>
+							</ul>
+						</div>
+						<div class="button book_button"><a
+								href="#">book<span></span><span></span><span></span></a></div>
+
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</footer>
-</div>
+
+	<!-- Offers Item -->
+	
+
+
+
+
+		<footer class="footer">
+				<div class="container">
+					<div class="row">
+		
+						<!-- Footer Column -->
+						<div class="col-lg-6 footer_column">
+							<div class="footer_col">
+								<div class="footer_content footer_about">
+									<div class="logo_container footer_logo">
+										<div class="logo"><a href="#"><img src="images/logo.png" alt="">Gayana</a></div>
+									</div>
+									<p class="footer_about_text">Discover Sri Lanka is a Sri Lankan tour operator that had been creating great vacations and amazing holidays for over 8 years with rave Reviews & Testimonials from hundreds of clients. Registered in 2008, Lakpura LLC has been in operation ever since and has been accredited by the Tourism Development Authority of Sri Lanka.</p>
+									<ul class="footer_social_list">
+										<li class="footer_social_item"><a href="https://www.pinterest.com/"><i class="fa fa-pinterest"></i></a></li>
+										<li class="footer_social_item"><a href="https://www.facebook.com/"><i class="fa fa-facebook-f"></i></a></li>
+										<li class="footer_social_item"><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+										<li class="footer_social_item"><a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+										<li class="footer_social_item"><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+		
+						<!-- Footer Column -->
+				
+		
+						<!-- Footer Column -->
+						
+		 
+		
+		
+							<div class="col-lg-6 footer_column">
+							<div class="footer_col">
+								<div class="footer_title">contact info</div>
+								<div class="footer_content footer_contact">
+									<ul class="contact_info_list">
+										<li class="contact_info_item d-flex flex-row">
+											<div><div class="contact_info_icon"><img src="images/placeholder.svg" alt=""></div></div>
+											<div class="contact_info_text">Gayana Hotel, <br> Medaketiya Tissa Road, <br> Tangalle.</div>
+										</li>
+										<li class="contact_info_item d-flex flex-row">
+											<div><div class="contact_info_icon"><img src="images/phone-call.svg" alt=""></div></div>
+											<div class="contact_info_text">0719872900</div>
+										</li>
+										<li class="contact_info_item d-flex flex-row">
+											<div><div class="contact_info_icon"><img src="images/message.svg" alt=""></div></div>
+											<div class="contact_info_text"><a href="mailto:contactme@gmail.com?Subject=Hello" target="_top">Gayana@gmail.com</a></div>
+										</li>
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+		
+					</div>
+				</div>
+			</footer>
+		
+			<!-- Copyright -->
+		
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 order-lg-2 order-2">
+							<div class="copyright_content d-flex flex-row align-items-center">
+								<div>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+							</div>
+						</div>
+						<div class="col-lg-9 order-lg-2 order-1">
+							<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>

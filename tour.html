@@ -184,6 +184,44 @@
 
 					</div>
 				</div>
+
+				<div class="col-md-1 temp_col"></div>
+				<div class="col-md-2 col-1680-3">
+					<div class="offers_image_container">
+						<!-- Image by https://unsplash.com/@kensuarez -->
+						<div class="offers_image_background"
+						:style="'background-image:url(' + hotel.image +')'"></div>
+						<div class="offer_name"><a href="single_listing.html">{{hotel.name}}</a></div>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="offers_content">
+						<div class="offers_price">LKR{{hotel.price}}<span>per night</span></div>
+						<div class="rating_r rating_r_4 offers_rating" data-rating="4">
+							<i></i>
+							<i></i>
+							<i></i>
+							<i></i>
+							<i></i>
+						</div>
+						<p class="offers_text">{{hotel.details}}</p>
+						<div class="offers_icons">
+							<ul class="offers_icons_list">
+								<li class="offers_icons_item"><img src="images/post.png" alt="">
+								</li>
+								<li class="offers_icons_item"><img src="images/compass.png" alt="">
+								</li>
+								<li class="offers_icons_item"><img src="images/bicycle.png" alt="">
+								</li>
+								<li class="offers_icons_item"><img src="images/sailboat.png" alt="">
+								</li>
+							</ul>
+						</div>
+						<div class="button book_button"><a
+								href="#">book<span></span><span></span><span></span></a></div>
+
+					</div>
+				</div>
 			</div>
 		</div>
 

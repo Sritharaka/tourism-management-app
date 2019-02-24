@@ -1,14 +1,14 @@
 <?php
 
-class tour
-{
+class Tour
+{   public $id;
     public $name;
     public $price;
     public $details;
 	public $image;
     public $destination;
-    public $tourType
-	public $id;
+    public $tourType;
+	
 	
 	function __construct($id, $name, $price, $details, $image, $destination, $tourType) {
 		$this->name = $name;
@@ -17,7 +17,7 @@ class tour
 		$this->image = $image;
 		$this->destination = $destination;
         $this->id    = $id;
-        $this->$tourType = $tourType;
+        $this->tourType = $tourType;
 	}
 }
 

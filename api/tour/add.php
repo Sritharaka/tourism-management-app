@@ -6,12 +6,12 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-require_once($_SERVER['DOCUMENT_ROOT'].'/app/repository/hotel.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/app/repository/tour.php');
 
 $data = json_decode(file_get_contents("php://input"));
 
-$repo = new HotelRepository();
-$result = $repo->add_hotel($data->name, $data->price, $data->image, $data->details, $data->email);
+$repo = new TourRepository();
+$result = $repo->add_tour($data->name, $data->price, $data->image, $data->details, $data->destination, $data->tourType);
 if($result != null){
  
     // set response code - 201 created

@@ -52,11 +52,11 @@
             return $tours;
         }
 
-       public function delete_hotel($id){
+       public function delete_tour($id){
 
         $connection = $this->get_conn();
        
-         $sql = "DELETE FROM `hotel` WHERE id=$id";
+         $sql = "DELETE FROM `tour` WHERE id=$id";
          
          $result = mysqli_query($connection, $sql);
 
@@ -66,11 +66,11 @@
 
        }
 
-         public function update_hotel($id, $name, $price, $image, $details, $email){
+         public function update_tour($id, $name, $price, $image, $details, $destination, $tourType){
            
             $connection = $this->get_conn();
 
-            $sql = "UPDATE `hotel` SET `name`='$name',`email`='$email',`price`='$price',`image_path`='$image',`details`='$details' WHERE id=$id";
+            $sql = "UPDATE `tour` SET `name`='$name',`destination`='$destination',`price`='$price',`image_path`='$image',`details`='$details', `tour_type`='$tourType' WHERE id=$id";
             
             $result = mysqli_query($connection, $sql);
 

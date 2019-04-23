@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
     <link rel="stylesheet" href="../assets/vendor/datepicker/tempusdominus-bootstrap-4.css" />
     <link rel="stylesheet" href="../assets/vendor/inputmask/css/inputmask.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <link rel="stylesheet" href="css//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.4/css/bulma.min.css"> -->
 </head>
 
@@ -220,10 +220,7 @@
                                         </li> 
                                         <li class="nav-item">
                                                 <a class="nav-link" href="/admin/pages/delete-hotel.html">Delete Hotel</a>
-                                            </li>   
-                                            <li class="nav-item">
-                                                    <a class="nav-link" href="/admin/pages/update-hotel.html">Update Hotel</a>
-                                                </li>                                    
+                                            </li>                                      
                                     </ul>
                                 </div>
                             </li>                            
@@ -298,24 +295,30 @@
                                         <div class="card-body">
                                             <form>
                                                 <div class="form-group">
-                                                    <label for="name" class="col-form-label">Name</label>
+                                                    <label for="name" class="col-form-label">Hotel Name</label>
                                                     <input id="name" v-model="name" type="text" class="form-control">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="email">Email address</label>
+                                                    <label for="email">Hotel Price One Day</label>
                                                     <input id="email" v-model="email" type="email" placeholder="name@example.com"
                                                         class="form-control">
-                                                    <p>We'll never share your email with anyone else.</p>
+                                                    <!-- <p>We'll never share your email with anyone else.</p> -->
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="price" class="col-form-label">Price</label>
+                                                    <label for="price" class="col-form-label">Hotel Price Night</label>
                                                     <input id="price" v-model="price" type="number" class="form-control"
                                                         placeholder="Price">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="image">image</label>
+                                                    <label for="image">Hotel image</label>
                                                     <input id="image" v-model="image" type="text" placeholder="images/hotel_1.jpg"
                                                         class="form-control">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="price" class="col-form-label">Hotel Contac Number</label>
+                                                    <input id="price" v-model="price" type="number" class="form-control"
+                                                        placeholder="Price">
                                                 </div>
                                                 <!-- <div class="custom-file mb-3">
                                                 <input type="file" class="custom-file-input" id="customFile">
@@ -325,8 +328,8 @@
                                                     <label for="details">Details</label>
                                                     <textarea class="form-control" v-model="details" id="details" rows="3"></textarea>
                                                 </div>
-                                                <button @click="updateHotel" type="button"
-                                                    class="btn btn-primary">Update!</button>
+                                                <button @click="addHotel" type="button"
+                                                    class="btn btn-primary">ADD!</button>
                                             </form>
                                         </div>
                                 </div>
@@ -427,13 +430,13 @@
                 })
         });
     </script>
-    <script src="../../js/toastr.min.js"></script>
-    <script src="../../js/vue.js"></script>
-    <script src="../../js/vuex.js"></script>
-    <script src="../../js/vue-resource.min.js"></script>
-   
-    <script src="../scripts/add-tour.js"></script>
-    <script src="../scripts/update-hotel.js"></script>
+ <script src="../../js/toastr.min.js"></script>
+ <script src="../../js/vue.js"></script>
+ <script src="../../js/vuex.js"></script>
+ <script src="../../js/vue-resource.min.js"></script>
+
+
+    <script src="../scripts/add-hotel.js"></script>
 </body>
 
 </html>

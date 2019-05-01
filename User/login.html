@@ -8,13 +8,15 @@
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/toastr.min.css">
 
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
 
-    <div class="main">
+    <div class="main" id="main">
 
         <section class="sign-in">
             <div class="container">
@@ -25,8 +27,8 @@
                     </div>
 
                     <div class="signin-form">
-                        <h2 class="form-title">Sign up</h2>
-                        <form method="POST" class="register-form" id="login-form">
+                        <h2 class="form-title">Sign In</h2>
+                        <div class="register-form" id="login-form">
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="your_name" id="your_name" placeholder="Your Name"/>
@@ -40,9 +42,11 @@
                                 <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
                             </div>
                             <div class="form-group form-button">
-                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                                <input @click="submit" type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                                <link-button value="Cancel" location="../index.html"></link-button>
                             </div>
-                        </form>
+                          
+                        </div>
                         <div class="social-login">
                             <span class="social-label">Or login with</span>
                             <ul class="socials">
@@ -60,6 +64,11 @@
 
     <!-- JS -->
     <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="../js/toastr.min.js"></script>
+	<script src="../js/vue.js"></script>
+	<script src="../js/vuex.js"></script>
+	<script src="../js/vue-resource.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

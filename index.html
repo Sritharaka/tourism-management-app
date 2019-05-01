@@ -19,7 +19,7 @@
 
 <body>
 
-	<div class="super_container">
+	<div class="super_container" id="main">
 
 		<!-- Header -->
 
@@ -46,11 +46,7 @@
 												class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 								</ul>
 							</div>
-							<div class="user_box ml-auto">
-								<div class="user_box_login user_box_link"><a href="./User/login.html">login</a></div>
-								<div class="user_box_register user_box_link"><a href="./User/register.html">register</a>
-								</div>
-							</div>
+							<login-links></login-links>
 						</div>
 					</div>
 				</div>
@@ -1072,7 +1068,7 @@
 					<div class="col-lg-3 order-lg-2 order-2">
 						<div class="copyright_content d-flex flex-row align-items-center">
 							<div>Copyright &copy;
-								<script>document.write(new Date().getFullYear());</script> All rights reserved
+								{{year}} All rights reserved
 								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							</div>
 						</div>
@@ -1098,6 +1094,8 @@
 	<script src="./js/vue.js"></script>
 	<script src="./js/vuex.js"></script>
 	<script src="./js/vue-resource.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script src="./js/index.js"></script>
 </body>
 
 </html>

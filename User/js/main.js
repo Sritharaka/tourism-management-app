@@ -17,3 +17,4 @@ Vue.component('link-button', {
   },
   template: '<input type="submit" @click="clicked" class="link-button" :value="value"/>'
 })
+

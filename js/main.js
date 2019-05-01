@@ -20,6 +20,7 @@ Vue.component('login-links', {
     logout:function(){
       this.loggedIn = false;
       sessionStorage.removeItem('user');
+      window.location.href= APP_BASE_URL;
     }
   },
   template: `

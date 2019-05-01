@@ -1,7 +1,7 @@
 <?php
 
-    require_once($_SERVER['DOCUMENT_ROOT'].'/app/models/tour.php');
-    require_once($_SERVER['DOCUMENT_ROOT'].'/app/config.php');
+    require_once(dirname(__FILE__).'/../models/tour.php');
+    require_once(dirname(__FILE__).'/../config.php');
 
     class TourRepository {
         private $config;

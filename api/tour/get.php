@@ -6,7 +6,7 @@ header("Access-Control-Allow-Methods: GET");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-require_once($_SERVER['DOCUMENT_ROOT'].'/app/repository/tour.php');
+require_once('../../app/repository/tour.php');
 
 $repo = new TourRepository();
 $result = $repo->get_all();
@@ -21,7 +21,7 @@ if($result != null){
 else{
 
     // set response code - 503 service unavailable
-    http_response_code(503);
+    http_response_code(500);
 
     // tell the user
     echo json_encode($result);

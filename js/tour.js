@@ -5,7 +5,7 @@ new Vue({
         year: new Date().getFullYear()
     },
     mounted:function(){
-        Vue.http.get('/api/tour/get.php')
+        Vue.http.get(APP_BASE_URL + '/api/tour/get.php')
                 .then(response => {
                     this.tours = response.body;
                     console.log(this.tours);

@@ -6,7 +6,7 @@ new Vue({
         year: new Date().getFullYear()
     },
     mounted:function(){
-        Vue.http.get('/api/hotel/get.php')
+        Vue.http.get(APP_BASE_URL + '/api/hotel/get.php')
                 .then(response => {
                     this.hotels = response.body;
                     console.log(this.hotels);

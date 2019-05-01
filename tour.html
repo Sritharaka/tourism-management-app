@@ -8,7 +8,7 @@
 	<meta name="description" content="Travelix Project">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="./plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="styles/contact_styles.css">
 	<link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
 	<link rel="stylesheet" type="text/css" href="styles/hotel_styles.css">
@@ -128,7 +128,7 @@
                             <div class="offers_item rating_4 col-md-6 pull-left" v-for="tour in tours">
                                 <div class="row">
                                     <div class="col-lg-1 temp_col"></div>
-                                    <div class="col-lg-3 col-1680-4">
+                                    <div class="col-lg-6 col-1680-4">
                                         <div class="offers_image_container">
                                             <!-- Image by https://unsplash.com/@kensuarez -->
                                             <div class="offers_image_background"
@@ -136,7 +136,7 @@
                                             <div class="offer_name"><a href="single_listing.html">{{tour.name}}</a></div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-5">
                                         <div class="offers_content">
                                             <div class="offers_price">LKR{{tour.price}}<span>per night</span></div>
                                             <div class="rating_r rating_r_4 offers_rating" data-rating="4">
@@ -261,7 +261,7 @@
 				<div class="col-lg-3 order-lg-2 order-2">
 					<div class="copyright_content d-flex flex-row align-items-center">
 						<div>Copyright &copy;
-							<script>document.write(new Date().getFullYear());</script> All rights reserved
+							{{year}} All rights reserved
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						</div>
 					</div>
@@ -275,14 +275,17 @@
 		</div>
 	</div>
 
+	</div>
+	<script src="js/constants.js"></script>
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="styles/bootstrap4/popper.js"></script>
 	<script src="styles/bootstrap4/bootstrap.min.js"></script>
 	<script src="plugins/parallax-js-master/parallax.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-	<script src="https://unpkg.com/vuex"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+	<script src="./js/toastr.min.js"></script>
+	<script src="./js/vue.js"></script>
+	<script src="./js/vuex.js"></script>
+	<script src="./js/vue-resource.min.js"></script>
 	<script src="js/tour.js"></script>
 
 </body>

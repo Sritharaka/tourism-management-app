@@ -11,7 +11,7 @@ require_once('../../app/repository/user.php');
 $data = json_decode(file_get_contents("php://input"));
 
 $repo = new UserRepository();
-$result = $repo->insert($data->name, $data->email, $data->password);
+$result = $repo->signin($data->username, $data->password);
 if($result != null && $result != false){
  
     // set response code - 201 created

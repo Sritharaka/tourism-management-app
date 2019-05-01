@@ -3,6 +3,7 @@ Vue.component('login-links', {
     return {
         user: {},
         loggedIn: false,
+        isAdmin: false
     }
   },
   mounted: function() {
@@ -11,6 +12,7 @@ Vue.component('login-links', {
       const user = JSON.parse(sessionStorage.getItem('user'));
       this.user = user;
       this.loggedIn = !!user.id;
+      this.isAdmin = user.userTypeId === '1';
       }
     },
   methods: {

@@ -1,0 +1,50 @@
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+    background:#fff;
+    font-family:"helvatica",sans-serif,serif;
+    font-size:100%;
+    text-decoration:blink;
+}
+h1,h2,h3,h4,h5,h6{
+   margin:0px;
+   padding:0px;
+   border:0;
+    font-weight:normal;
+}
+    
+.content{
+    width:940px;
+    margin:0 auto;
+}
+    
+div#origami{
+    min-height:100%;
+    position:relative;
+}
+
+div#header-content{
+    border:0px solid green;
+    height:75px;
+    background-color:#DAEEFE;
+}
+
+div#header-rowspan{
+    margin:3px auto auto 5px;
+    padding:0px;
+    color:blue;
+}
+
+div#page-content{
+    border:0px solid blue;
+    height:500px;
+    background-color:#FFF;
+
+}
+
+div#footer-content{
+    border:0px solid red;
+    height:80px;
+    background-color:#F2F2F2;
+}

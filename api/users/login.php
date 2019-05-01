@@ -9,8 +9,8 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 require_once('../../app/repository/user.php');
 
 $data = json_decode(file_get_contents("php://input"));
-
-$repo = new UserRepository();
+try {
+    $repo = new UserRepository();
 $result = $repo->signin($data->username, $data->password);
 if($result != null && $result != false){
  
@@ -28,7 +28,16 @@ else{
     http_response_code(500);
 
     // tell the user
-    echo json_encode(array('message'=>'user creation failed'));
+    echo json_encode(array('message'=>'user login failed'));
 }
+} catch (\Throwable $th) {
+     // set response code - 503 service unavailable
+    http_response_code(500);
+
+    // tell the user
+    echo json_encode(array('message'=>'user login failed'));
+
+}
+
 
 ?>

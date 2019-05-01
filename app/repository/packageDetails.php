@@ -1,7 +1,7 @@
 <?php
 
-    require_once($_SERVER['DOCUMENT_ROOT'].'/app/models/hotel.php');
-    require_once($_SERVER['DOCUMENT_ROOT'].'/app/config.php');
+    require_once(dirname(__FILE__).'/../app/models/hotel.php');
+    require_once(dirname(__FILE__).'/../app/config.php');
 
     class HotelRepository {
         private $config;

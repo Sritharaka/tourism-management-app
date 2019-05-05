@@ -11,7 +11,7 @@ require_once '../../app/repository/booking.php';
 $data = json_decode(file_get_contents("php://input"));
 try {
     $repo = new BookingRepository();
-    $result = $repo->add($data->name, $data->price, $data->image, $data->details, $data->email);
+    $result = $repo->add($data->user_id, $data->hotel_id, $data->package_id, $data->tour_id);
     if ($result != null) {
         http_response_code(201);
         echo json_encode($result);

@@ -9,7 +9,7 @@
         public function __construct()
         {
             $configuration = new Config();
-            $this->config = $configuration->get_db_info(true);
+            $this->config = $configuration->get_db_info();
         }
 
         private function get_conn()

@@ -1,9 +1,9 @@
 <?php
 
-    require_once(dirname(__FILE__).'/../models/hotel.php');
+    require_once(dirname(__FILE__).'/../models/booking.php');
     require_once(dirname(__FILE__).'/../config.php');
 
-    class HotelRepository {
+    class BookingRepository {
         private $config;
 
         public function __construct()
@@ -20,36 +20,26 @@
         public function get_all()
         {
             $connection = $this->get_conn();
-            $hotels = array();
+            $bookings = array();
 
             if(mysqli_connect_errno()){
-                $detail = "Suspendisse potenti. In faucibus massa. Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit. Nullam eu convallis tortor.
-                Lorem ipsum dolor sit amet.";
-
-                $hotels = array(
-                	new Hotel(1, "Hotel 1", 1000, $detail, "images/hotel_1.jpg", 'keminda4lk@gamil.com'),
-                	new Hotel(2, "Hotel 2", 1200, $detail, "images/hotel_2.jpg", 'keminda4lk@gamil.com'),
-                    new Hotel(3, "Hotel 3", 1300, $detail, "images/hotel_3.jpg", 'keminda4lk@gamil.com'),
-                    
-                );
+               throw new Exception('Connection Error');
             }else{
-                    
-                $sql = "SELECT `id`, `name`, `location`, `email`, `address`, `price`, `image_path`, `details` FROM `hotel`";
+                $sql = "SELECT `id`, `user_id`, `hotel_id`, `package_id`, `tour_id` FROM `booking_order`";
                 $result = $connection->query($sql);
 
                 if ($result->num_rows > 0) {
                     // output data of each row
                     while($row = $result->fetch_assoc()) {              
-                        $hotel = new Hotel($row["id"], $row["name"], $row["price"], $row["details"], $row["image_path"], $row["email"]);
-                        array_push($hotels, $hotel);
+                        $booking = new Booking($row["id"], $row["user_id"], $row["hotel_id"], $row["package_id"], $row["tour_id"]);
+                        array_push($bookings, $booking);
                     }
                 }
 
                 $connection->close();
             }
 
-            return $hotels;
+            return $bookings;
         }
 
        public function delete_hotel($id){

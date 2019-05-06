@@ -21,7 +21,7 @@ new Vue({
              Vue.http.post(APP_BASE_URL + '/api/users/register.php',data)
                 .then(response => {
                     toastr.success('Regiser sucessfull');
-                    window.location.href = APP_BASE_URL + '/user/login.html';
+                    window.location.href = APP_BASE_URL + '/User/login.html';
                 })
                 .catch(err =>{
                     toastr.error('Error Register');

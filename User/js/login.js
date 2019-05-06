@@ -22,7 +22,7 @@ new Vue({
 
                     sessionStorage.setItem('user', JSON.stringify(response.body));
 
-                    window.location.href = APP_BASE_URL;
+                    window.location.href = window.location.href.replace("User/login.html", ""); 
                 })
                 .catch(err =>{
                     toastr.error('Error login into the sytem');

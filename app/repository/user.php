@@ -125,7 +125,7 @@
             }
 
             $connection->close();
-            return $result1 && $result2;
+            return $result1 && $result2 ? true : false;
         }
     }
 ?>

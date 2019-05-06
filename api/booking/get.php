@@ -14,10 +14,10 @@ try {
         http_response_code(200);
         echo json_encode($result);
     } else {
-        http_response_code(503);
+        http_response_code(500);
         echo json_encode($result);
     }
 } catch (\Throwable $th) {
-        http_response_code(501);
+        http_response_code(500 );
         echo json_encode($th);
 }
